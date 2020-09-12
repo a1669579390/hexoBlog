@@ -1,0 +1,32 @@
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: .3125rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1.25rem;
+  background-clip: padding-box;
+  background-color: #e0eafc;
+  background-image: linear-gradient(45deg,#e0eafc 25%,transparent 0,transparent 50%,#cfdef3 0,var#cfdef3 75%,transparent 0,transparent);
+}
+
+$mini-scrollbar {
+  &::-webkit-scrollbar {
+    width: .3125rem;
+    height: .3125rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e0eafc;
+  }
+}
