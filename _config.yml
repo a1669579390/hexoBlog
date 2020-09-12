@@ -13,8 +13,8 @@ timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
-root: /
+url: https://github.com/a1669579390
+root: /hexoBlog/
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -110,8 +110,6 @@ deploy:
   type: git
   repo: https://github.com/a1669579390/hexoBlog #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: release
-  message: [message]
-
 markdown:
   render: # 渲染器设置
     html: false # 排除 html 标签

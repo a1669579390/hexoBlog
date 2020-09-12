@@ -1,8 +1,8 @@
 # Alternate site name
 alternate: Yang Tongmiao
 
-url: http://localhost:4000
-root: /
+url: https://github.com/a1669579390
+root: /hexoBlog/
 permalink: :title/ # edit for Theme.shoka
 # permalink_defaults:
 
