@@ -107,7 +107,10 @@ theme: shoka
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: "git"
+  type: git
+  repo: https://github.com/a1669579390/hexoBlog #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: release
+  message: [message]
 
 markdown:
   render: # 渲染器设置
