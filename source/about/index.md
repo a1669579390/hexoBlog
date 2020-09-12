@@ -1,4 +1,4 @@
----
+<!-- ---
 title: 友情链接
 keywords: 友情链接
 description: 霜月琉璃的小伙伴们
@@ -28,4 +28,4 @@ copyright: false
 
 # 小伙伴们
 {% linksfile friends/_data.yml %}
-
+ -->
