@@ -443,21 +443,24 @@ const algoliaSearch = function (pjax) {
       container: "#search-hits",
       templates: {
         item: function (data) {
-          // console.log(data);
-          var str = "<span>";
-          data.categories.forEach(function (el, index) {
-            if (data.categories.length == 1) {
-              str += el.name + "</span>";
-            } else {
-              if (index == 0) {
-                str += el.name;
-              } else if (index == data.categories.length - 1) {
-                str += '<i class="ic i-angle-right"></i>' + el.name + "</span>";
+          if (data.categories) {
+            var str = "<span>";
+            data.categories.forEach(function (el, index) {
+              if (data.categories.length == 1) {
+                str += el.name + "</span>";
               } else {
-                str += '<i class="ic i-angle-right"></i>' + el.name;
+                if (index == 0) {
+                  str += el.name;
+                } else if (index == data.categories.length - 1) {
+                  str +=
+                    '<i class="ic i-angle-right"></i>' + el.name + "</span>";
+                } else {
+                  str += '<i class="ic i-angle-right"></i>' + el.name;
+                }
               }
-            }
-          });
+            });
+          }
+
           // // console.log(str);
           var cats = data.categories ? str : "";
           // var cats = data.categories
