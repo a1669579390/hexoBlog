@@ -39,6 +39,7 @@ category_map: # edit for Theme.shoka
   博客日记: note
   web前端: html
   初识前端: html-1
+  Angular: angular
 tag_map:
 
 # Writing
@@ -72,6 +73,13 @@ algolia:
   apiKey: e8a1065c830a79c3867a80786d9f1149
   indexName: "hexoSearch"
   chunkSize: 5000
+  # fields:
+  #   - categories
+  #   - gallery
+  #   - path
+  #   - photos
+  #   - tags
+  #   - title
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)

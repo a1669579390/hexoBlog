@@ -458,7 +458,7 @@ const algoliaSearch = function (pjax) {
               }
             }
           });
-          // console.log(str);
+          // // console.log(str);
           var cats = data.categories ? str : "";
           // var cats = data.categories
           //   ? "<span>" +
