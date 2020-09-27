@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var fs = require('hexo-fs');
+var fs = require("hexo-fs");
 
 const prepareQuery = (categories, parent) => {
   const query = {};
@@ -8,21 +8,23 @@ const prepareQuery = (categories, parent) => {
   if (parent) {
     query.parent = parent;
   } else {
-    query.parent = {$exists: false};
+    query.parent = { $exists: false };
   }
 
-  return categories.find(query).sort('name', 1).filter(cat => cat.length);
+  return categories
+    .find(query)
+    .sort("name", 1)
+    .filter((cat) => cat.length);
 };
 
-hexo.extend.helper.register('_list_categories', function(depth = 0) {
+hexo.extend.helper.register("_list_categories", function (depth = 0) {
   let hexo = this;
   let categories = hexo.site.categories;
 
-  if (!categories || !categories.length) return '';
-
+  if (!categories || !categories.length) return "";
 
   const hierarchicalList = (level, parent) => {
-    let result = '';
+    let result = "";
 
     prepareQuery(categories, parent).forEach((cat, i) => {
       let child;
@@ -31,9 +33,11 @@ hexo.extend.helper.register('_list_categories', function(depth = 0) {
         child = hierarchicalList(level + 1, cat._id);
       }
 
-      let catname = `<a itemprop="url" href="${hexo.url_for(cat.path)}">${cat.name}</a><small>( ${cat.length} )</small>`;
+      let catname = `<a itemprop="url" href="${hexo.url_for(cat.path)}">${
+        cat.name
+      }</a><small>( ${cat.length} )</small>`;
 
-      switch(level) {
+      switch (level) {
         case 0:
           result += `<div><h2 class="item header">${catname}</h2>`;
           break;
@@ -51,8 +55,8 @@ hexo.extend.helper.register('_list_categories', function(depth = 0) {
         result += `${child}`;
       }
 
-      if(level === 0) {
-        result += '</div>';
+      if (level === 0) {
+        result += "</div>";
       }
     });
 
@@ -62,28 +66,32 @@ hexo.extend.helper.register('_list_categories', function(depth = 0) {
   return hierarchicalList(0);
 });
 
-hexo.extend.helper.register('_categories', function() {
+hexo.extend.helper.register("_categories", function () {
   let hexo = this;
   let categories = hexo.site.categories;
-  if (!categories || !categories.length) return '';
+  if (!categories || !categories.length) return "";
 
-  var pangu = hexo.theme.pangu ? require('pangu') : {
-    spacing: data => {
-      return data;
-    }
-  };
-
+  var pangu = hexo.theme.pangu
+    ? require("pangu")
+    : {
+        spacing: (data) => {
+          return data;
+        },
+      };
 
   let result = {};
 
   categories.forEach((cat, i) => {
     let child = prepareQuery(categories, cat._id);
-    let cover = 'source/_posts' + cat.path.replace(hexo.config.category_dir, '') + 'cover.jpg'
+    let cover =
+      "source/_posts" +
+      cat.path.replace(hexo.config.category_dir, "") +
+      "cover.jpg";
 
     if (fs.existsSync(cover)) {
-      let className = cat.slug.split('/');
-      className.pop()
-      cat.class = className.join(' ');
+      let className = cat.slug.split("/");
+      className.pop();
+      cat.class = className.join(" ");
       cat.name = pangu.spacing(cat.name);
 
       if (child.length != 0) {
@@ -92,51 +100,56 @@ hexo.extend.helper.register('_categories', function() {
 
       result[cat._id] = cat;
     }
-
-  })
+  });
 
   return result;
 });
 
-hexo.extend.helper.register('_category_prev', function(name) {
+hexo.extend.helper.register("_category_prev", function (name) {
   let hexo = this;
   let categories = hexo.site.categories;
-  if (!categories || !categories.length) return '';
+  if (!categories || !categories.length) return "";
 
-  let result = '';
+  let result = "";
 
-  categories.find({name}).forEach((current) => {
-    if(current.parent) {
-      categories.find({_id: current.parent}).forEach((cat, i) => {
+  categories.find({ name }).forEach((current) => {
+    if (current.parent) {
+      categories.find({ _id: current.parent }).forEach((cat, i) => {
         result += `<a href="${hexo.url_for(cat.path)}">${cat.name}</a>`;
-      })
+      });
     }
-  })
+  });
 
   return result;
 });
 
-
-hexo.extend.helper.register('_category_posts', function(page) {
+hexo.extend.helper.register("_category_posts", function (page) {
   let hexo = this;
   let categories = hexo.site.categories;
-  if (!categories || !categories.length || !page.categories || !page.categories.length) return '';
+  if (
+    !categories ||
+    !categories.length ||
+    !page.categories ||
+    !page.categories.length
+  )
+    return "";
 
-  let result = '';
-  let cat = page.categories.toArray()
+  let result = "";
+  let cat = page.categories.toArray();
 
-  categories.find({_id: cat[cat.length - 1]._id}).forEach((category) => {
-
-    if(category.posts) {
-      category.posts.sort('title', 1).forEach((post) => {
-        var current = '';
-        if(post.path == page.path) {
+  categories.find({ _id: cat[cat.length - 1]._id }).forEach((category) => {
+    if (category.posts) {
+      category.posts.sort("title", 1).forEach((post) => {
+        var current = "";
+        if (post.path == page.path) {
           current = ' class="active"';
         }
-        result += `<li${current}><a href="${hexo.url_for(post.path)}" rel="bookmark" title="${post.title}">${post.title}</a></li>`;
-      })
+        result += `<li${current}><a href="${hexo.url_for(
+          post.path
+        )}" rel="bookmark" title="${post.title}">${post.title}</a></li>`;
+      });
     }
-  })
+  });
 
   return result;
 });
