@@ -14,7 +14,7 @@ timezone: ""
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://github.com/a1669579390
-root: /hexoBlog/
+root: /
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -40,6 +40,9 @@ category_map: # edit for Theme.shoka
   web前端: html
   初识前端: html-1
   Angular: angular
+  后端语言: java-1
+  Java: Java
+  Java基本语法: java-week-2
 tag_map:
 
 # Writing
@@ -125,7 +128,7 @@ deploy:
   branch: release
 markdown:
   render: # 渲染器设置
-    html: false # 排除 html 标签
+    html: true # 排除 html 标签
     xhtmlOut: true
     breaks: true
     linkify: true

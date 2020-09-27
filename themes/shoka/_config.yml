@@ -171,6 +171,17 @@ creative_commons:
   license: by-nc-sa
   language: deed.zh
 
+default_category: uncategorized
+category_map: # edit for Theme.shoka
+  转载说明: computer-science
+  博客日记: note
+  web前端: html
+  初识前端: html-1
+  Angular: angular
+  后端语言: java-1
+  Java: Java
+  Java基本语法: java-week-2
+tag_map:
 # Reward (Donate)
 reward:
   # If true, reward will be displayed in every article by default.
@@ -205,7 +216,7 @@ search:
 valine:
   appId: 7pz2gufe9XYUs6ErfamTfNj4-gzGzoHsz
   appKey: ov0dbhCWaWVlkMuXjUfGaleW
-  placeholder: ヽ(○´∀`)ﾉ♪111 # Comment box placeholder
+  placeholder: 在这里输入你想发表的看法 # Comment box placeholder
   avatar: mp # Gravatar style
   pageSize: 10 # Pagination size
   lang: zh-CN
