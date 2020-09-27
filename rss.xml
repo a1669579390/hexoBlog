@@ -10,8 +10,307 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 23 Sep 2020 18:04:36 +0800</pubDate>
-        <lastBuildDate>Wed, 23 Sep 2020 18:04:36 +0800</lastBuildDate>
+        <pubDate>Sun, 27 Sep 2020 10:00:00 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Sep 2020 10:00:00 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://github.com/a1669579390/Java/java-1/java-week-2/</guid>
+            <title>Java 基本语法</title>
+            <link>https://github.com/a1669579390/Java/java-1/java-week-2/</link>
+            <category term="Java" scheme="https://github.com/a1669579390/categories/Java/" />
+            <category term="后端语言" scheme="https://github.com/a1669579390/categories/Java/java-1/" />
+            <category term="Java" scheme="https://github.com/a1669579390/tags/Java/" />
+            <category term="Java初级知识" scheme="https://github.com/a1669579390/tags/Java%E5%88%9D%E7%BA%A7%E7%9F%A5%E8%AF%86/" />
+            <pubDate>Sun, 27 Sep 2020 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;java-程序简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-程序简介&#34;&gt;#&lt;/a&gt; Java 程序简介&lt;/h2&gt;
+&lt;p&gt;一个 Java 程序可以认为是一系列对象的集合，这些对象可以调用彼此的方法来协同工作。下面简单介绍下类，对象，方法和变量的概念。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。&lt;/li&gt;
+&lt;li&gt;类：类是一个模板，它描述一类对象的行为和状态。&lt;/li&gt;
+&lt;li&gt;方法：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。&lt;/li&gt;
+&lt;li&gt;实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java-基本语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-基本语法&#34;&gt;#&lt;/a&gt; Java 基本语法&lt;/h2&gt;
+&lt;p&gt;编写 Java 程序时，应注意以下几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大小写敏感：Java 是大小写敏感的，这就意味着标识符  &lt;code&gt;Hello&lt;/code&gt;  与  &lt;code&gt;hello&lt;/code&gt;  是不同的。&lt;/li&gt;
+&lt;li&gt;类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如  &lt;code&gt;MyFirstJavaClass&lt;/code&gt;  。&lt;/li&gt;
+&lt;li&gt;方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。例如  &lt;code&gt;calcData&lt;/code&gt; 。 - 源文件名：源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 .java。（如果文件名和类名不相同则会导致编译错误）。&lt;/li&gt;
+&lt;li&gt;主方法入口：所有的 Java 程序由  &lt;code&gt;public static void main(String[] args)&lt;/code&gt;  方法开始执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java-标识符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-标识符&#34;&gt;#&lt;/a&gt; Java 标识符&lt;/h2&gt;
+&lt;p&gt;Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。&lt;/p&gt;
+&lt;p&gt;关于 Java 标识符，有以下几点需要注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有的标识符都应该以字母（A-Z 或者 a-z）, 美元符（$）、或者下划线（_）开始。&lt;/li&gt;
+&lt;li&gt;首字符之后可以是字母（A-Z 或者 a-z）, 美元符（$）、下划线（_）或数字的任何字符组合。&lt;/li&gt;
+&lt;li&gt;关键字不能用作标识符。&lt;/li&gt;
+&lt;li&gt;标识符是大小写敏感的。&lt;/li&gt;
+&lt;li&gt;合法标识符举例：age、$salary、_value、__1_value。&lt;/li&gt;
+&lt;li&gt;非法标识符举例：123abc、-salary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java-关键字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-关键字&#34;&gt;#&lt;/a&gt; Java 关键字&lt;/h2&gt;
+&lt;p&gt;下面列出了 Java 关键字。这些保留字不能用于常量、变量、和任何标识符的名称。&lt;/p&gt;
+&lt;table &gt;
+  &lt;tr &gt;
+	  &lt;th&gt;类别&lt;/th&gt;
+	  &lt;th&gt;关键字&lt;/th&gt;
+	  &lt;th&gt;说明&lt;/th&gt;  
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td rowspan=&#34;4&#34;&gt;访问控制&lt;/td&gt;
+	    &lt;td&gt;private&lt;/td&gt;
+	    &lt;td&gt;私有的&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;protected&lt;/td&gt;
+	    &lt;td&gt;受保护的&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;public&lt;/td&gt;
+	    &lt;td&gt;公共的&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;default&lt;/td&gt;
+	    &lt;td&gt;默认&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+  &lt;td rowspan=&#34;14&#34;&gt;类、方法和变量修饰符&lt;/td&gt;
+	    &lt;td&gt;abstract&lt;/td&gt;
+	    &lt;td&gt;声明抽象&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;class&lt;/td&gt;
+	    &lt;td&gt;类&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;extends&lt;/td&gt;
+	    &lt;td&gt;扩充,继承&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td&gt;final&lt;/td&gt;
+	    &lt;td&gt;最终值,不可改变的&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;implements&lt;/td&gt;
+	    &lt;td&gt;实现（接口）&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;name&lt;/td&gt;
+	    &lt;td&gt;用户自定义&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;interface&lt;/td&gt;
+	    &lt;td &gt;接口&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;native&lt;/td&gt;
+	    &lt;td &gt;本地，原生方法（非 Java 实现）&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;new&lt;/td&gt;
+	    &lt;td &gt;	新,创建&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	    &lt;td &gt;static&lt;/td&gt;
+	    &lt;td &gt;静态&lt;/td&gt;
+	&lt;/tr&gt;
+  	&lt;tr&gt;
+	    &lt;td &gt;strictfp&lt;/td&gt;
+	    &lt;td &gt;严格,精准&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;synchronized&lt;/td&gt;
+	    &lt;td &gt;线程,同步&lt;/td&gt;
+	&lt;/tr&gt;
+  	&lt;tr&gt;
+	    &lt;td &gt;transient&lt;/td&gt;
+	    &lt;td &gt;短暂&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;volatile&lt;/td&gt;
+	    &lt;td &gt;易失&lt;/td&gt;
+	&lt;/tr&gt;
+      &lt;tr&gt;
+	    &lt;td rowspan=&#34;12&#34;&gt;程序控制语句&lt;/td&gt;
+	    &lt;td &gt;break&lt;/td&gt;
+	    &lt;td &gt;跳出循环&lt;/td&gt;
+	&lt;/tr&gt;
+      &lt;tr&gt;
+	    &lt;td &gt;case&lt;/td&gt;
+	    &lt;td &gt;定义一个值以供 switch 选择&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;continue&lt;/td&gt;
+	    &lt;td &gt;继续&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;default&lt;/td&gt;
+	    &lt;td &gt;默认&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;do&lt;/td&gt;
+	    &lt;td &gt;运行&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;else&lt;/td&gt;
+	    &lt;td &gt;否则&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;for&lt;/td&gt;
+	    &lt;td &gt;循环&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;if&lt;/td&gt;
+	    &lt;td &gt;如果&lt;/td&gt;
+	&lt;/tr&gt;
+    &lt;tr&gt;
+	    &lt;td &gt;instanceof&lt;/td&gt;
+	    &lt;td &gt;实例&lt;/td&gt;
+	&lt;/tr&gt;
+      &lt;tr&gt;
+	    &lt;td &gt;return&lt;/td&gt;
+	    &lt;td &gt;返回&lt;/td&gt;
+	&lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td&gt;switch&lt;/td&gt;
+&lt;td&gt;根据值选择执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;while&lt;/td&gt;
+&lt;td&gt;循环&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&#34;6&#34; align=&#34;center&#34;&gt;错误处理&lt;/td&gt;
+&lt;td&gt;assert&lt;/td&gt;
+&lt;td&gt;断言表达式是否为真&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;catch&lt;/td&gt;
+&lt;td&gt;捕捉异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;finally&lt;/td&gt;
+&lt;td&gt;有没有异常都执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;throw&lt;/td&gt;
+&lt;td&gt;抛出一个异常对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;throws&lt;/td&gt;
+&lt;td&gt;声明一个异常可能被抛出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;try&lt;/td&gt;
+&lt;td&gt;捕获异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&#34;2&#34; align=&#34;center&#34;&gt;包相关&lt;/td&gt;
+&lt;td&gt;import&lt;/td&gt;
+&lt;td&gt;引入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;package&lt;/td&gt;
+&lt;td&gt;包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&#34;8&#34; align=&#34;center&#34;&gt;基本类型&lt;/td&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;布尔型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;字节型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;字符型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;双精度浮点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;单精度浮点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;整型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;长整型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;短整型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&#34;3&#34; align=&#34;center&#34;&gt;变量引用&lt;/td&gt;
+&lt;td&gt;super&lt;/td&gt;
+&lt;td&gt;父类,超类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;this&lt;/td&gt;
+&lt;td&gt;本类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;void&lt;/td&gt;
+&lt;td&gt;无返回值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&#34;3&#34; align=&#34;center&#34;&gt;保留关键字&lt;/td&gt;
+&lt;td&gt;goto&lt;/td&gt;
+&lt;td&gt;是关键字，但不能使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;是关键字，但不能使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;td&gt;空&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;java-注释&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java-注释&#34;&gt;#&lt;/a&gt; Java 注释&lt;/h2&gt;
+&lt;p&gt;类似于 C/C++、Java 也支持单行以及多行注释。注释中的字符将被 Java 编译器忽略。&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;public class HelloWorld {&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   /* 这是第一个 Java 程序&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    * 它将打印 Hello World&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    * 这是一个多行注释的示例&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    */&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    public static void main (String [] args){&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;       // 这是单行注释的示例&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;       /* 这个也是单行注释的示例 */&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;       System.out.println (&#34;Hello World&#34;);&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    }&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/a1669579390/Java/java-1/java-week-1/</guid>
+            <title>Java 入门知识</title>
+            <link>https://github.com/a1669579390/Java/java-1/java-week-1/</link>
+            <category term="Java" scheme="https://github.com/a1669579390/categories/Java/" />
+            <category term="后端语言" scheme="https://github.com/a1669579390/categories/Java/java-1/" />
+            <category term="Java" scheme="https://github.com/a1669579390/tags/Java/" />
+            <category term="Java初级知识" scheme="https://github.com/a1669579390/tags/Java%E5%88%9D%E7%BA%A7%E7%9F%A5%E8%AF%86/" />
+            <pubDate>Sun, 27 Sep 2020 09:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;我的第一个-java-程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#我的第一个-java-程序&#34;&gt;#&lt;/a&gt; 我的第一个 Java 程序&lt;/h2&gt;
+&lt;p&gt;新建一个 HelloWorld.java (文件名需与类名一致), 代码如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;public class HelloWorld {&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    public static void main(String[] args) {&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        System.out.println(&#34;Hello World&#34;);&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    }&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;cmd-运行以下命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cmd-运行以下命令&#34;&gt;#&lt;/a&gt; cmd 运行以下命令：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;javac HelloWorld.java&lt;/li&gt;
+&lt;li&gt;java HelloWorld&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;执行命令简述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行命令简述&#34;&gt;#&lt;/a&gt; 执行命令简述：&lt;/h3&gt;
+&lt;p&gt;上面我们使用了两个命令，javac 后面跟的是以 .java 为后缀名的文件，该命令用于将 java 源文件编译为 class 字节码文件，运行该命令，会首先检查语法是否有错，无错则编译成功，生成一个 .class 后缀名的文件。&lt;br /&gt;
+运行 java 命令时，后面跟的是 java 文件的类名，需注意这里的不需要写后缀名。&lt;br /&gt;
+控制台输出  &lt;code&gt;Hello World&lt;/code&gt;  表示运行成功&lt;/p&gt;
+&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;IDE 工具推荐&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#54a8e9d6;&#34; title=&#34;IntelliJ IDEA&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9pZGVhLw==&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/a1669579390/ImagesHosting/imgs/large/20200927101615.png&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9pZGVhLw==&#34;&gt;IntelliJ IDEA&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;https://www.jetbrains.com/idea/&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#54a8e9d6;&#34; title=&#34;IntelliJ IDEA 永久激活方法&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly93d3cuamI1MS5uZXQvYXJ0aWNsZS8xOTU5NjIuaHRt&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/a1669579390/ImagesHosting/imgs/large/20200927101615.png&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly93d3cuamI1MS5uZXQvYXJ0aWNsZS8xOTU5NjIuaHRt&#34;&gt;IntelliJ IDEA 永久激活方法&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;破解方法按照链接里面的即可&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://github.com/a1669579390/angular/angular-1/week-1/</guid>
             <title>Angular基础知识</title>
@@ -22,7 +321,7 @@
             <pubDate>Wed, 23 Sep 2020 18:04:36 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;angular-教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#angular-教程&#34;&gt;#&lt;/a&gt; Angular 教程&lt;/h1&gt;
 &lt;h2 id=&#34;angular-相关的学习网站&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#angular-相关的学习网站&#34;&gt;#&lt;/a&gt; Angular 相关的学习网站&lt;/h2&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#54a8e9d6;&#34; title=&#34;Angular 官网&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9hbmd1bGFyLmNuLw==&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/a1669579390/ImagesHosting/imgs/large/20200923155331.svg&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#54a8e9d6;&#34; title=&#34;Angular 官网&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9hbmd1bGFyLmNuLw==&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/a1669579390/ImagesHosting/imgs/large/20200923155331.svg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9hbmd1bGFyLmNuLw==&#34;&gt;Angular 官网&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;https://angular.cn/&lt;/p&gt;
@@ -30,7 +329,7 @@
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9uZy5hbnQuZGVzaWduL2RvY3MvaW50cm9kdWNlL3po&#34;&gt;Ant Design UI 组件库&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;https://ng.ant.design/docs/introduce/zh&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&#34;angular-简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#angular-简介&#34;&gt;#&lt;/a&gt; Angular 简介&lt;/h2&gt;
 &lt;p&gt;一款非常优秀的前端高级 JS 框架 由 Misko Hevery 等人创建 2009 年被 Google 公式收购，用于其多款产品 有一个全职的开发团队继续开发和维护这个库 有了这一类框架就可以轻松构建 SPA 应用程序 通过指令扩展了 HTML，通过表达式绑定数据到 HTML。&lt;/p&gt;
 &lt;h2 id=&#34;angular-的优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#angular-的优点&#34;&gt;#&lt;/a&gt; angular 的优点&lt;/h2&gt;
@@ -355,7 +654,7 @@ PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待&lt
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% links %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: #站点名称&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  owner: #管理员名字&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: #站点网址&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  desc: #简短描述&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  image: #一张图片&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  color: #颜色代码&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% endlinks %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;举个栗子：&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% links %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  owner: 霜月琉璃&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  desc: 琉璃的医学 &amp; 编程笔记&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  image: https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  color: &#34;#e9546b&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  owner: 霜月琉璃&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  image: images/avatar.jpg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  desc: 琉璃的医学 &amp; 编程笔记&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  color: &#34;#9d5b8b&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% endlinks %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#e9546b;&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% links %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  owner: 霜月琉璃&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  desc: 琉璃的医学 &amp; 编程笔记&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  image: https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  color: &#34;#e9546b&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  owner: 霜月琉璃&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  image: images/avatar.jpg&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- site: 優萌初華&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  url: https://shoka.lostyu.me&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  desc: 琉璃的医学 &amp; 编程笔记&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  color: &#34;#9d5b8b&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#123;% endlinks %&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#e9546b;&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
@@ -367,7 +666,7 @@ PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待&lt
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;以上标签块里的内容，还可以保存到一个 &lt;code&gt;yml&lt;/code&gt;  文件中，然后使用 &lt;code&gt;linksfile&lt;/code&gt;  标签。&lt;br /&gt;
 其中， &lt;code&gt;path&lt;/code&gt;  位于 &lt;code&gt;&amp;lt;root&amp;gt;/source&lt;/code&gt;  目录下。&lt;/li&gt;
@@ -496,11 +795,11 @@ PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待&lt
 &lt;p&gt;这里是卡片 1 的内容&lt;br /&gt;
 &lt;strong&gt;加粗&lt;/strong&gt;&lt;br /&gt;
 &lt;span class=&#34;label success&#34;&gt; success&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#e9546b;&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; style=&#34;--block-color:#e9546b;&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;卡片 2&#34;&gt;
 &lt;p&gt;这里是卡片 2 的内容&lt;/p&gt;
@@ -558,7 +857,7 @@ M834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/s
 &lt;h2 id=&#34;mermaid流程图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mermaid流程图&#34;&gt;#&lt;/a&gt;  &lt;code&gt;mermaid&lt;/code&gt;  流程图&lt;/h2&gt;
 &lt;p&gt;本功能基于 &lt;code&gt;markdown-it-mermaid&lt;/code&gt; &lt;br /&gt;
  在 Front Matter 中添加 &lt;code&gt;mermaid: true&lt;/code&gt;  以支持&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tZXJtYWlkLWpzLmdpdGh1Yi5pby9tZXJtYWlkLyMv&#34;&gt; Mermaid&lt;/span&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;title: 流程图显示&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mermaid: true&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;graph LR&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A [Square Rect] -- Link text --&gt; B ((Circle))&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A --&gt; C (Round Rect)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    B --&gt; D {Rhombus}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    C --&gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sequenceDiagram&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    loop Daily query&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        Alice-&gt;&gt;Bob: Hello Bob, how are you?&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        alt is sick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Not so good :(&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        else is well&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Feeling fresh like a daisy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        opt Extra response&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Thanks for asking&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;pre class=&#34;mermaid graph&#34;&gt;&lt;svg id=&#34;mermaid-1600857250681&#34; width=&#34;100%&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; style=&#34;max-width: 497.7718811035156px;&#34; viewBox=&#34;0 0 497.7718811035156 167&#34;&gt;&lt;g&gt;&lt;g class=&#34;output&#34;&gt;&lt;g class=&#34;clusters&#34;&gt;&lt;/g&gt;&lt;g class=&#34;edgePaths&#34;&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M103.65391791044776,69.75L171.0390625,39L247.625,39&#34; marker-end=&#34;url(#arrowhead15)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead15&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M103.65391791044776,108.75L171.0390625,139.5L228.234375,139.5&#34; marker-end=&#34;url(#arrowhead16)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead16&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M309.625,39L354.015625,39L400.8184709260876,68.44715483685182&#34; marker-end=&#34;url(#arrowhead17)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead17&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M329.015625,139.5L354.015625,139.5L400.81846998718345,111.05284575012297&#34; marker-end=&#34;url(#arrowhead18)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead18&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabels&#34;&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;translate(171.0390625,39)&#34;&gt;&lt;g transform=&#34;translate(-32.1953125,-9.5)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;64.359375&#34; height=&#34;19.03125&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Link text&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;nodes&#34;&gt;&lt;g class=&#34;node default&#34; id=&#34;A&#34; transform=&#34;translate(60.921875,89.25)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; x=&#34;-52.921875&#34; y=&#34;-19.5&#34; width=&#34;105.84375&#34; height=&#34;39&#34; class=&#34;label-container&#34;&gt;&lt;/rect&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-42.921875,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Square Rect&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;B&#34; transform=&#34;translate(278.625,39)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;circle x=&#34;-31&#34; y=&#34;-19.5&#34; r=&#34;31&#34; class=&#34;label-container&#34;&gt;&lt;/circle&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-21,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Circle&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;C&#34; transform=&#34;translate(278.625,139.5)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;rect rx=&#34;5&#34; ry=&#34;5&#34; x=&#34;-50.390625&#34; y=&#34;-19.5&#34; width=&#34;100.78125&#34; height=&#34;39&#34; class=&#34;label-container&#34;&gt;&lt;/rect&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-40.390625,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Round Rect&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;D&#34; transform=&#34;translate(434.39374923706055,89.25)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;polygon points=&#34;55.378125000000004,0 110.75625000000001,-55.378125000000004 55.378125000000004,-110.75625000000001 0,-55.378125000000004&#34; transform=&#34;translate(-55.378125000000004,55.378125000000004)&#34; class=&#34;label-container&#34;&gt;&lt;/polygon&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-32.03125,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Rhombus&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/pre&gt;&lt;pre class=&#34;mermaid&#34;&gt;&lt;svg id=&#34;mermaid-1600857251795&#34; width=&#34;100%&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;100%&#34; style=&#34;max-width:513.109375px;&#34; viewBox=&#34;-50 -10 513.109375 426&#34;&gt;&lt;g&gt;&lt;/g&gt;&lt;g&gt;&lt;line id=&#34;actor0&#34; x1=&#34;75&#34; y1=&#34;5&#34; x2=&#34;75&#34; y2=&#34;415&#34; class=&#34;actor-line&#34; stroke-width=&#34;0.5px&#34; stroke=&#34;#999&#34;&gt;&lt;/line&gt;&lt;rect x=&#34;0&#34; y=&#34;0&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;75&#34; y=&#34;32.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;75&#34; dy=&#34;0&#34;&gt;Alice&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;line id=&#34;actor1&#34; x1=&#34;338.109375&#34; y1=&#34;5&#34; x2=&#34;338.109375&#34; y2=&#34;415&#34; class=&#34;actor-line&#34; stroke-width=&#34;0.5px&#34; stroke=&#34;#999&#34;&gt;&lt;/line&gt;&lt;rect x=&#34;263.109375&#34; y=&#34;0&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;338.109375&#34; y=&#34;32.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;338.109375&#34; dy=&#34;0&#34;&gt;Bob&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead&#34; refX=&#34;5&#34; refY=&#34;2&#34; markerWidth=&#34;6&#34; markerHeight=&#34;4&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0,0 V 4 L6,2 Z&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;defs&gt;&lt;marker id=&#34;crosshead&#34; markerWidth=&#34;15&#34; markerHeight=&#34;8&#34; orient=&#34;auto&#34; refX=&#34;16&#34; refY=&#34;4&#34;&gt;&lt;path fill=&#34;black&#34; stroke=&#34;#000000&#34; stroke-width=&#34;1px&#34; d=&#34;M 9,2 V 6 L16,4 Z&#34; style=&#34;stroke-dasharray: 0, 0;&#34;&gt;&lt;/path&gt;&lt;path fill=&#34;none&#34; stroke=&#34;#000000&#34; stroke-width=&#34;1px&#34; d=&#34;M 0,1 L 6,7 M 6,1 L 0,7&#34; style=&#34;stroke-dasharray: 0, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;defs&gt;&lt;marker id=&#34;sequencenumber&#34; refX=&#34;15&#34; refY=&#34;15&#34; markerWidth=&#34;60&#34; markerHeight=&#34;40&#34; orient=&#34;auto&#34;&gt;&lt;circle cx=&#34;15&#34; cy=&#34;15&#34; r=&#34;6&#34;&gt;&lt;/circle&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;118&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Hello Bob, how are you?&lt;/text&gt;&lt;line x1=&#34;75&#34; y1=&#34;125&#34; x2=&#34;338.109375&#34; y2=&#34;125&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;178&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Not so good :(&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;185&#34; x2=&#34;75&#34; y2=&#34;185&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;233&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Feeling fresh like a daisy&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;240&#34; x2=&#34;75&#34; y2=&#34;240&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;65&#34; y1=&#34;135&#34; x2=&#34;348.109375&#34; y2=&#34;135&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;348.109375&#34; y1=&#34;135&#34; x2=&#34;348.109375&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;250&#34; x2=&#34;348.109375&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;135&#34; x2=&#34;65&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;195&#34; x2=&#34;348.109375&#34; y2=&#34;195&#34; class=&#34;loopLine&#34; style=&#34;stroke-dasharray: 3, 3;&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;65,135 115,135 115,148 106.6,155 65,155&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;72.5&#34; y=&#34;150&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;72.5&#34;&gt;alt&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;150&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ is sick ]&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;210&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ is well ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;303&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Thanks for asking&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;310&#34; x2=&#34;75&#34; y2=&#34;310&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;65&#34; y1=&#34;260&#34; x2=&#34;348.109375&#34; y2=&#34;260&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;348.109375&#34; y1=&#34;260&#34; x2=&#34;348.109375&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;320&#34; x2=&#34;348.109375&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;260&#34; x2=&#34;65&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;65,260 115,260 115,273 106.6,280 65,280&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;72.5&#34; y=&#34;275&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;72.5&#34;&gt;opt&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;275&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ Extra response ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;55&#34; y1=&#34;75&#34; x2=&#34;358.109375&#34; y2=&#34;75&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;358.109375&#34; y1=&#34;75&#34; x2=&#34;358.109375&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;55&#34; y1=&#34;330&#34; x2=&#34;358.109375&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;55&#34; y1=&#34;75&#34; x2=&#34;55&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;55,75 105,75 105,88 96.6,95 55,95&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;62.5&#34; y=&#34;90&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;62.5&#34;&gt;loop&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;90&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ Daily query ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;rect x=&#34;0&#34; y=&#34;350&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;75&#34; y=&#34;382.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;75&#34; dy=&#34;0&#34;&gt;Alice&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;rect x=&#34;263.109375&#34; y=&#34;350&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;338.109375&#34; y=&#34;382.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;338.109375&#34; dy=&#34;0&#34;&gt;Bob&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;title: 流程图显示&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mermaid: true&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;graph LR&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A [Square Rect] -- Link text --&gt; B ((Circle))&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A --&gt; C (Round Rect)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    B --&gt; D {Rhombus}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    C --&gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sequenceDiagram&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    loop Daily query&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        Alice-&gt;&gt;Bob: Hello Bob, how are you?&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        alt is sick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Not so good :(&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        else is well&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Feeling fresh like a daisy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        opt Extra response&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&gt;&gt;Alice: Thanks for asking&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;```&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;pre class=&#34;mermaid graph&#34;&gt;&lt;svg id=&#34;mermaid-1601189608978&#34; width=&#34;100%&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; style=&#34;max-width: 497.7718811035156px;&#34; viewBox=&#34;0 0 497.7718811035156 167&#34;&gt;&lt;g&gt;&lt;g class=&#34;output&#34;&gt;&lt;g class=&#34;clusters&#34;&gt;&lt;/g&gt;&lt;g class=&#34;edgePaths&#34;&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M103.65391791044776,69.75L171.0390625,39L247.625,39&#34; marker-end=&#34;url(#arrowhead15)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead15&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M103.65391791044776,108.75L171.0390625,139.5L228.234375,139.5&#34; marker-end=&#34;url(#arrowhead16)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead16&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M309.625,39L354.015625,39L400.8184709260876,68.44715483685182&#34; marker-end=&#34;url(#arrowhead17)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead17&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;g class=&#34;edgePath&#34; style=&#34;opacity: 1;&#34;&gt;&lt;path class=&#34;path&#34; d=&#34;M329.015625,139.5L354.015625,139.5L400.81846998718345,111.05284575012297&#34; marker-end=&#34;url(#arrowhead18)&#34; style=&#34;fill:none&#34;&gt;&lt;/path&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead18&#34; viewBox=&#34;0 0 10 10&#34; refX=&#34;9&#34; refY=&#34;5&#34; markerUnits=&#34;strokeWidth&#34; markerWidth=&#34;8&#34; markerHeight=&#34;6&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0 0 L 10 5 L 0 10 z&#34; class=&#34;arrowheadPath&#34; style=&#34;stroke-width: 1; stroke-dasharray: 1, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabels&#34;&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;translate(171.0390625,39)&#34;&gt;&lt;g transform=&#34;translate(-32.1953125,-9.5)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;64.359375&#34; height=&#34;19.03125&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Link text&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;edgeLabel&#34; style=&#34;opacity: 1;&#34; transform=&#34;&#34;&gt;&lt;g transform=&#34;translate(0,0)&#34; class=&#34;label&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; width=&#34;0&#34; height=&#34;0&#34; style=&#34;fill:#e8e8e8;&#34;&gt;&lt;/rect&gt;&lt;text&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;nodes&#34;&gt;&lt;g class=&#34;node default&#34; id=&#34;A&#34; transform=&#34;translate(60.921875,89.25)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;rect rx=&#34;0&#34; ry=&#34;0&#34; x=&#34;-52.921875&#34; y=&#34;-19.5&#34; width=&#34;105.84375&#34; height=&#34;39&#34; class=&#34;label-container&#34;&gt;&lt;/rect&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-42.921875,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Square Rect&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;B&#34; transform=&#34;translate(278.625,39)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;circle x=&#34;-31&#34; y=&#34;-19.5&#34; r=&#34;31&#34; class=&#34;label-container&#34;&gt;&lt;/circle&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-21,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Circle&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;C&#34; transform=&#34;translate(278.625,139.5)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;rect rx=&#34;5&#34; ry=&#34;5&#34; x=&#34;-50.390625&#34; y=&#34;-19.5&#34; width=&#34;100.78125&#34; height=&#34;39&#34; class=&#34;label-container&#34;&gt;&lt;/rect&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-40.390625,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Round Rect&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;g class=&#34;node default&#34; id=&#34;D&#34; transform=&#34;translate(434.39374923706055,89.25)&#34; style=&#34;opacity: 1;&#34;&gt;&lt;polygon points=&#34;55.378125000000004,0 110.75625000000001,-55.378125000000004 55.378125000000004,-110.75625000000001 0,-55.378125000000004&#34; transform=&#34;translate(-55.378125000000004,55.378125000000004)&#34; class=&#34;label-container&#34;&gt;&lt;/polygon&gt;&lt;g class=&#34;label&#34; transform=&#34;translate(0,0)&#34;&gt;&lt;g transform=&#34;translate(-32.03125,-9.5)&#34;&gt;&lt;text style=&#34;&#34;&gt;&lt;tspan xml:space=&#34;preserve&#34; dy=&#34;1em&#34; x=&#34;1&#34;&gt;Rhombus&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/pre&gt;&lt;pre class=&#34;mermaid&#34;&gt;&lt;svg id=&#34;mermaid-1601189610216&#34; width=&#34;100%&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;100%&#34; style=&#34;max-width:513.109375px;&#34; viewBox=&#34;-50 -10 513.109375 426&#34;&gt;&lt;g&gt;&lt;/g&gt;&lt;g&gt;&lt;line id=&#34;actor0&#34; x1=&#34;75&#34; y1=&#34;5&#34; x2=&#34;75&#34; y2=&#34;415&#34; class=&#34;actor-line&#34; stroke-width=&#34;0.5px&#34; stroke=&#34;#999&#34;&gt;&lt;/line&gt;&lt;rect x=&#34;0&#34; y=&#34;0&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;75&#34; y=&#34;32.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;75&#34; dy=&#34;0&#34;&gt;Alice&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;line id=&#34;actor1&#34; x1=&#34;338.109375&#34; y1=&#34;5&#34; x2=&#34;338.109375&#34; y2=&#34;415&#34; class=&#34;actor-line&#34; stroke-width=&#34;0.5px&#34; stroke=&#34;#999&#34;&gt;&lt;/line&gt;&lt;rect x=&#34;263.109375&#34; y=&#34;0&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;338.109375&#34; y=&#34;32.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;338.109375&#34; dy=&#34;0&#34;&gt;Bob&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;defs&gt;&lt;marker id=&#34;arrowhead&#34; refX=&#34;5&#34; refY=&#34;2&#34; markerWidth=&#34;6&#34; markerHeight=&#34;4&#34; orient=&#34;auto&#34;&gt;&lt;path d=&#34;M 0,0 V 4 L6,2 Z&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;defs&gt;&lt;marker id=&#34;crosshead&#34; markerWidth=&#34;15&#34; markerHeight=&#34;8&#34; orient=&#34;auto&#34; refX=&#34;16&#34; refY=&#34;4&#34;&gt;&lt;path fill=&#34;black&#34; stroke=&#34;#000000&#34; stroke-width=&#34;1px&#34; d=&#34;M 9,2 V 6 L16,4 Z&#34; style=&#34;stroke-dasharray: 0, 0;&#34;&gt;&lt;/path&gt;&lt;path fill=&#34;none&#34; stroke=&#34;#000000&#34; stroke-width=&#34;1px&#34; d=&#34;M 0,1 L 6,7 M 6,1 L 0,7&#34; style=&#34;stroke-dasharray: 0, 0;&#34;&gt;&lt;/path&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;defs&gt;&lt;marker id=&#34;sequencenumber&#34; refX=&#34;15&#34; refY=&#34;15&#34; markerWidth=&#34;60&#34; markerHeight=&#34;40&#34; orient=&#34;auto&#34;&gt;&lt;circle cx=&#34;15&#34; cy=&#34;15&#34; r=&#34;6&#34;&gt;&lt;/circle&gt;&lt;/marker&gt;&lt;/defs&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;118&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Hello Bob, how are you?&lt;/text&gt;&lt;line x1=&#34;75&#34; y1=&#34;125&#34; x2=&#34;338.109375&#34; y2=&#34;125&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;178&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Not so good :(&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;185&#34; x2=&#34;75&#34; y2=&#34;185&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;233&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Feeling fresh like a daisy&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;240&#34; x2=&#34;75&#34; y2=&#34;240&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;65&#34; y1=&#34;135&#34; x2=&#34;348.109375&#34; y2=&#34;135&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;348.109375&#34; y1=&#34;135&#34; x2=&#34;348.109375&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;250&#34; x2=&#34;348.109375&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;135&#34; x2=&#34;65&#34; y2=&#34;250&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;195&#34; x2=&#34;348.109375&#34; y2=&#34;195&#34; class=&#34;loopLine&#34; style=&#34;stroke-dasharray: 3, 3;&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;65,135 115,135 115,148 106.6,155 65,155&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;72.5&#34; y=&#34;150&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;72.5&#34;&gt;alt&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;150&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ is sick ]&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;210&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ is well ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;303&#34; class=&#34;messageText&#34; style=&#34;font-size: 16px; font-family: &amp;quot;trebuchet ms&amp;quot;, verdana, arial; text-anchor: middle;&#34;&gt;Thanks for asking&lt;/text&gt;&lt;line x1=&#34;338.109375&#34; y1=&#34;310&#34; x2=&#34;75&#34; y2=&#34;310&#34; class=&#34;messageLine0&#34; stroke-width=&#34;2&#34; stroke=&#34;black&#34; marker-end=&#34;url(#arrowhead)&#34; style=&#34;fill: none;&#34;&gt;&lt;/line&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;65&#34; y1=&#34;260&#34; x2=&#34;348.109375&#34; y2=&#34;260&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;348.109375&#34; y1=&#34;260&#34; x2=&#34;348.109375&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;320&#34; x2=&#34;348.109375&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;65&#34; y1=&#34;260&#34; x2=&#34;65&#34; y2=&#34;320&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;65,260 115,260 115,273 106.6,280 65,280&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;72.5&#34; y=&#34;275&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;72.5&#34;&gt;opt&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;275&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ Extra response ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;line x1=&#34;55&#34; y1=&#34;75&#34; x2=&#34;358.109375&#34; y2=&#34;75&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;358.109375&#34; y1=&#34;75&#34; x2=&#34;358.109375&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;55&#34; y1=&#34;330&#34; x2=&#34;358.109375&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;55&#34; y1=&#34;75&#34; x2=&#34;55&#34; y2=&#34;330&#34; class=&#34;loopLine&#34;&gt;&lt;/line&gt;&lt;polygon points=&#34;55,75 105,75 105,88 96.6,95 55,95&#34; class=&#34;labelBox&#34;&gt;&lt;/polygon&gt;&lt;text x=&#34;62.5&#34; y=&#34;90&#34; class=&#34;labelText&#34;&gt;&lt;tspan x=&#34;62.5&#34;&gt;loop&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&#34;206.5546875&#34; y=&#34;90&#34; class=&#34;loopText&#34; style=&#34;text-anchor: middle;&#34;&gt;&lt;tspan x=&#34;206.5546875&#34;&gt;[ Daily query ]&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;rect x=&#34;0&#34; y=&#34;350&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;75&#34; y=&#34;382.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;75&#34; dy=&#34;0&#34;&gt;Alice&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g&gt;&lt;rect x=&#34;263.109375&#34; y=&#34;350&#34; fill=&#34;#eaeaea&#34; stroke=&#34;#666&#34; width=&#34;150&#34; height=&#34;65&#34; rx=&#34;3&#34; ry=&#34;3&#34; class=&#34;actor&#34;&gt;&lt;/rect&gt;&lt;text x=&#34;338.109375&#34; y=&#34;382.5&#34; dominant-baseline=&#34;central&#34; alignment-baseline=&#34;central&#34; class=&#34;actor&#34; style=&#34;text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;&#34;&gt;&lt;tspan x=&#34;338.109375&#34; dy=&#34;0&#34;&gt;Bob&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
