@@ -178,6 +178,8 @@ category_map: # edit for Theme.shoka
   web前端: html
   初识前端: html-1
   Angular: angular
+  React: React
+  Vite: Vite
   后端语言: java-1
   Java: Java
   Java基本语法: java-week-2

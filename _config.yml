@@ -43,6 +43,9 @@ category_map: # edit for Theme.shoka
   后端语言: java-1
   Java: Java
   Java基本语法: java-week-2
+  React: React
+  前端跨域处理: react-1
+  Vite: Vite
 tag_map:
 
 # Writing
