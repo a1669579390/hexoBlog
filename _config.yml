@@ -46,6 +46,8 @@ category_map: # edit for Theme.shoka
   React: React
   前端跨域处理: react-1
   Vite: Vite
+  Git: git
+  同步阿里云服务器: git-1
 tag_map:
 
 # Writing
