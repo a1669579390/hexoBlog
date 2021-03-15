@@ -1,3 +1,3 @@
 FROM nginx
-COPY ./public/ public/
+COPY ./public/ dist/
 EXPOSE 80
