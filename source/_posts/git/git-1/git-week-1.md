@@ -1,6 +1,6 @@
 ---
 title: git push 同步到阿里云服务器
-date: 2021/3/15 09:00:00
+date: 2021/3/15 09:00:01
 categories:
   - [git, 阿里云服务器]
 tags:
