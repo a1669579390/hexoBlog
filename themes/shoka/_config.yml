@@ -192,10 +192,6 @@ reward:
     wechatpay: /wechatpay.png
     alipay: /alipay.png
 
-# bgm
-audio:
-  - https://music.163.com/#/my/m/music/playlist?id=161237652
-
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # ---------------------------------------------------------------
@@ -203,6 +199,9 @@ audio:
 # Dependencies: https://github.com/amehime/hexo-renderer-multi-markdown-it
 pangu: false
 
+# bgm
+audio:
+  - https://music.163.com/#/playlist?id=3778678
 # Algolia Search
 # For more information: https://www.algolia.com
 search:
