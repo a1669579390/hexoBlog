@@ -21,6 +21,18 @@ pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
+# 自定义修改是否每次进入都需要加载动画
+custom_config:
+  loader: false
+
+fireworks:
+  enable: true # 是否启用
+  color: # 烟花颜色
+    - "rgba(255,182,185,.9)"
+    - "rgba(250,227,217,.9)"
+    - "rgba(187,222,214,.9)"
+    - "rgba(138,198,209,.9)"
+
 # Directory
 source_dir: source
 public_dir: public
@@ -39,6 +51,7 @@ category_map: # edit for Theme.shoka
   博客日记: note
   web前端: html
   初识前端: html-1
+  前端: html-2
   Angular: angular
   后端语言: java-1
   Java: Java
